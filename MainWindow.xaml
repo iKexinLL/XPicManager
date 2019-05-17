@@ -1,12 +1,45 @@
-﻿<Window x:Class="XPicManager.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:XPicManager"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="XPicManager.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:XPicManager"
+	mc:Ignorable="d"
+	Title="MainWindow"
+	Height="450"
+	Width="800">
+	<Grid>
+		<Button
+			Content="打开文件"
+			Height="40.5"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="200,41,200,0"
+			Name="btnOpenFile"
+			Click="onClickOpenFile" />
+		<Button
+			Content="打开文件夹"
+			Height="40.5"
+			Grid.Column="0"
+			Grid.Row="1"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="200,122.5,200,0"
+			Click="onClickOpenFolder" />
+		<Button
+			Content="全局搜索"
+			Height="40.5"
+			Grid.Column="0"
+			Grid.Row="2"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="200,204.5,200,0" />
+		<Button
+			Content="选项"
+			Height="40.5"
+			Grid.Column="0"
+			Grid.Row="3"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="200,286.5,200,0" />
+	</Grid>
 </Window>

@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace XPicManager
 {
@@ -23,5 +24,23 @@ namespace XPicManager
         {
             InitializeComponent();
         }
+		
+        void onClickOpenFile(object sender, RoutedEventArgs e)
+		{
+        	var openFileDialog = new OpenFileDialog();
+        	openFileDialog.Title = "选择数据源文件";
+        	openFileDialog.Filter = "gif文件|*.gif";
+			if (openFileDialog.ShowDialog() == false)
+            {
+                return;
+            }
+
+			MessageBox.Show(openFileDialog.FileName);
+		}
+        
+		void onClickOpenFolder(object sender, RoutedEventArgs e)
+		{
+			// https://stackoverflow.com/questions/1922204/open-directory-dialog
+		}
     }
 }

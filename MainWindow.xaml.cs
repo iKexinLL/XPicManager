@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Win32;
+using Ookii.Dialogs.Wpf;
 
 namespace XPicManager
 {
@@ -25,22 +25,25 @@ namespace XPicManager
             InitializeComponent();
         }
 		
+        // 使用Ookii.Dialogs.Wpf打开文件的话,第一次会有些慢
         void onClickOpenFile(object sender, RoutedEventArgs e)
 		{
-        	var openFileDialog = new OpenFileDialog();
+        	var openFileDialog = new VistaOpenFileDialog();
         	openFileDialog.Title = "选择数据源文件";
         	openFileDialog.Filter = "gif文件|*.gif";
-			if (openFileDialog.ShowDialog() == false)
-            {
-                return;
-            }
-
-			MessageBox.Show(openFileDialog.FileName);
+        	if ((bool)openFileDialog.ShowDialog(this))
+        	{
+				MessageBox.Show(openFileDialog.FileName);
+				NavigationService.GetNavigationService(this).Navigate(new Uri("Page1.xaml"));
+        	}
 		}
         
 		void onClickOpenFolder(object sender, RoutedEventArgs e)
 		{
 			// https://stackoverflow.com/questions/1922204/open-directory-dialog
+			var tp = new VistaFolderBrowserDialog();
+			if ((bool)tp.ShowDialog(this))
+				MessageBox.Show(tp.SelectedPath);
 		}
     }
 }

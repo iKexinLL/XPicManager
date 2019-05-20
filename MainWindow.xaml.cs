@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 
+
 namespace XPicManager
 {
     /// <summary>
@@ -40,7 +41,14 @@ namespace XPicManager
         
 		void onClickOpenFolder(object sender, RoutedEventArgs e)
 		{
-			// https://stackoverflow.com/questions/1922204/open-directory-dialog
+           	using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
+			{
+           		if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+           		{
+           			MessageBox.Show(dialog.SelectedPath);
+           		}
+			}
+			
 		}
     }
-}
+};

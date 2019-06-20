@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Page3Test" Height="300" Width="300" MaxHeight="300" MinHeight="200" MaxWidth="300" MinWidth="200">
     <!--StackPanel是最简单的布局容器,简单的的单行或单列中放置元素-->
-    <Border Margin="5" Padding="5" Background="LightGray" BorderBrush="LightBlue" 
+    <Border Margin="5" Padding="5" Background="Snow" BorderBrush="LightBlue" 
             BorderThickness="3,5,3,5" CornerRadius="30">
         <DockPanel LastChildFill="True">
             <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right"
@@ -16,7 +16,7 @@
                 <Button Margin="10,10,2,10" Padding="3" MinWidth="48">OK</Button>
                 <Button Margin="2,10,10,10" Padding="3">Cancel</Button>
             </StackPanel>
-            <TextBox DockPanel.Dock="Top" Background="Aqua" Margin="10" FontSize="20">This is a test</TextBox>
+            <TextBox DockPanel.Dock="Top" Background="Wheat" Margin="10" FontSize="20">This is a test</TextBox>
         </DockPanel>
     </Border>
 </Window>

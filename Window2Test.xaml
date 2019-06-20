@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XPicManager"
         mc:Ignorable="d"
-        Title="Window2" Height="300" Width="300">
-    <Grid>
-        
-    </Grid>
+        Title="Window2" Height="300" Width="300" MinHeight="200">
+    <!--<Grid ShowGridLines="True" MinHeight="200">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="30" MinHeight="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0">File00</Button>
+        <Button Grid.Row="0" Grid.Column="1">File01</Button>
+        <Button Grid.Row="0" Grid.Column="2">File02</Button>
+        <Button Grid.Row="1" Grid.Column="2">File12</Button>
+    </Grid>-->
+    <Border Margin="5" Padding="5" Background="Snow" BorderBrush="LightBlue"
+            BorderThickness="3,5,3,5" CornerRadius="30">
+        <Grid ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <!-- 我之前设置为 5* 以及 *, 会导致在放大时,*的大小变得奇怪-->
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox Background="Snow" Margin="10" FontSize="20" Text="This is a test" BorderBrush="Snow">
+               
+            </TextBox>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button MinWidth="48" Margin="2,10,10,10">OK</Button>
+                <Button MinWidth="48" Margin="10,10,2,10">Cancle</Button>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

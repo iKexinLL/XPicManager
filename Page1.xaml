@@ -13,7 +13,8 @@
 			Click="BackToMain" 
 			/>
 		<Image
-			Source="C:\Users\Administrator\Desktop\1.gif"
+			Source="C:\Users\Administrator\Desktop\1.png"
+			Stretch="Fill"
 			Grid.Column="0"
 			Grid.Row="0"
 			Margin="91,0,105,0" />

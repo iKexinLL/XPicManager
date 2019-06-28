@@ -89,6 +89,9 @@
     <Compile Include="Window2Test.xaml.cs">
       <DependentUpon>Window2Test.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Window3Canvas.xaml.cs">
+      <DependentUpon>Window3Canvas.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -115,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Window2Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3Canvas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

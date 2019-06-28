@@ -13,7 +13,7 @@
             <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right"
                         Orientation="Horizontal">
                 <!--<Button Margin="10,10,12,10" Padding="3">OK</Button>-->
-                <Button Margin="10,10,2,10" Padding="3" MinWidth="48">OK</Button>
+                <Button Margin="10,10,2,10" Padding="3" MinWidth="48" Click="Button_Click">OK</Button>
                 <Button Margin="2,10,10,10" Padding="3">Cancel</Button>
             </StackPanel>
             <TextBox DockPanel.Dock="Top" Background="Wheat" Margin="10" FontSize="20">This is a test</TextBox>

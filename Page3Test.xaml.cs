@@ -9,6 +9,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace XPicManager
@@ -24,6 +25,15 @@ namespace XPicManager
 
             // var a = 1;
             // var b = 2;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // NavigationService.GetNavigationService(this).Navigate(new Page1());
+            var p1 = new Page1();
+            p1.MinHeight = this.Height + 500;
+            p1.MinWidth = this.Width + 500;
+            this.Content = p1;
         }
     }
 }

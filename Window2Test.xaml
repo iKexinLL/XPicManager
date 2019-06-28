@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XPicManager"
         mc:Ignorable="d"
-        Title="Window2" Height="300" Width="300" MinHeight="200">
+        Title="Window2" Height="300" Width="500" MinHeight="200">
     <!--<Grid ShowGridLines="True" MinHeight="200">
         <Grid.RowDefinitions>
             <RowDefinition MaxHeight="30" MinHeight="30"></RowDefinition>
@@ -21,21 +21,58 @@
         <Button Grid.Row="0" Grid.Column="2">File02</Button>
         <Button Grid.Row="1" Grid.Column="2">File12</Button>
     </Grid>-->
-    <Border Margin="5" Padding="5" Background="Snow" BorderBrush="LightBlue"
+    <!--<Border Margin="5" Padding="5" Background="Snow" BorderBrush="LightBlue"
             BorderThickness="3,5,3,5" CornerRadius="30">
         <Grid ShowGridLines="True">
             <Grid.RowDefinitions>
-                <!-- 我之前设置为 5* 以及 *, 会导致在放大时,*的大小变得奇怪-->
+                -->
+    <!-- 我之前设置为 5* 以及 *, 会导致在放大时,*的大小变得奇怪-->
+    <!--
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBox Background="Snow" Margin="10" FontSize="20" Text="This is a test" BorderBrush="Snow">
-               
             </TextBox>
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button MinWidth="48" Margin="2,10,10,10">OK</Button>
                 <Button MinWidth="48" Margin="10,10,2,10">Cancle</Button>
             </StackPanel>
+        </Grid>
+    </Border>-->
+    <Border Margin="5" Padding="5" Background="Snow" BorderBrush="Snow"
+            BorderThickness="3,5,3,5" CornerRadius="30">
+        <Grid ShowGridLines="True" Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid ShowGridLines="True" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" SharedSizeGroup="TextLabel"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox Margin="5" Grid.Column="0">A very long text in this label</TextBox>
+                <GridSplitter Grid.Column="1" Width="3" Background="Black"
+                              HorizontalAlignment="Center" VerticalAlignment="Stretch"></GridSplitter>
+                <Label Grid.Column="2" Margin="5">More text</Label>
+                <TextBox Grid.Column="3" Margin="5">A text box</TextBox>
+            </Grid>
+            
+            <Grid Grid.Row="1" ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" SharedSizeGroup="TextLabel"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox Margin="5" Grid.Column="0">Same width as up</TextBox>
+                <GridSplitter Grid.Column="1" Width="3" Background="Black"
+                              HorizontalAlignment="Center" VerticalAlignment="Stretch"></GridSplitter>
+                <TextBox Grid.Column="2" Margin="5">An other text box</TextBox>
+            </Grid>
+
         </Grid>
     </Border>
 </Window>

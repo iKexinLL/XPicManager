@@ -1,0 +1,17 @@
+﻿<Window x:Class="XPicManager.Window3Canval"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XPicManager"
+        mc:Ignorable="d"
+        Title="Window3Canval" Height="300" Width="300">
+    <Grid>
+        <Canvas Height="200" Width="200" Background="LightBlue" ClipToBounds="False">
+            <Button Canvas.Left="10" Canvas.Top="10">(10,10)</Button>
+            <Button Canvas.Left="120" Canvas.Top="30">(120,30)</Button>
+            <Button Canvas.Left="60" Canvas.Top="80" Width="1150" Height="50">(60,80)</Button>
+            <Button Canvas.Left="70" Canvas.Top="120" Width="100" Height="50">(70,120)</Button>
+        </Canvas>
+    </Grid>
+</Window>

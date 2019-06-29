@@ -86,6 +86,9 @@
     <Compile Include="Page3Test.xaml.cs">
       <DependentUpon>Page3Test.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageInkCanvasTest.xaml.cs">
+      <DependentUpon>PageInkCanvasTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window2Test.xaml.cs">
       <DependentUpon>Window2Test.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page4Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageInkCanvasTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
